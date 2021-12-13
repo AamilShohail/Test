@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Test.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if (Session["UserId"] != null && Session["Role"].ToString() == "Admin")
+{
+    <p>
+        <button type="button" class="btn btn-secondary" style="text-decoration:none">@Html.ActionLink("Create New Person", "Create")</button>
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressInMumbai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PINCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectDependents)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressInMumbai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PINCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectDependents)
+            </td>
+            <td>
+                @if (Session["UserId"] != null && Session["Role"].ToString() == "Employee")
+                {
+                    <button type="button" class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.PersonId })</button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.PersonId })</button>
+                    <button type="button" class="btn btn-success">@Html.ActionLink("Edit", "Edit", new { id = item.PersonId })</button>
+                    <button type="button" class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.PersonId })</button>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,137 @@
+﻿@model Test.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressInMumbai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressInMumbai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PINCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PINCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccountNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankAccountNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IFSCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IFSCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AadharCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AadharCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnionMembershipNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnionMembershipNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PANCardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PANCardNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectDependents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectDependents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
